@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
+import Avatar from './Avatar.vue'
 </script>
 
 <template>
@@ -18,7 +15,7 @@ const count = ref(0)
                         <use xlink:href="#icon-_qi"></use>
                     </svg>    
                 </div>
-                <div style="flex: 1;font-size: 16px;font-weight: bold;">新对话</div>
+                <div style="flex: 1;font-size: 14px;line-height: 24px; font-weight: bold;">新对话</div>
                 <div>
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-editor"></use>
@@ -32,10 +29,10 @@ const count = ref(0)
             <div class="side-bar-title side-bar-item-row">搜索</div>
             <div class="side-bar-title side-bar-item-row">对话</div>
         </div>
-        <div class="side-bar-item" style="background-color: green;"> 
-            <div>
-                <div>图标</div>
-                <div>sanye</div>
+        <div class="side-bar-item"> 
+            <div class="side-bar-item-row">
+                <Avatar name="sanye" />
+                <div style="margin: 0 10px;flex: 1;font-size: 14px;line-height: 24px; font-weight: bold;">sanye</div>
             </div>
         </div>
     </div>
@@ -58,7 +55,7 @@ const count = ref(0)
 }
 
 .side-bar-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     margin: 5px;
 }
