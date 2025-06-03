@@ -6,7 +6,7 @@ import ChatContent from './components/ChatContent.vue'
 <template>
   <div class="container"> 
     <SideBar />
-    <ChatContent />
+    <ChatContent message="你好" />
   </div>
 </template>
 

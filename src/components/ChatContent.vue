@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import Avatar from './Avatar.vue'
 import ChatInput from './ChatInput.vue'
+import ChatTip from './ChatTip.vue'
+import ChatMessage from './ChatMessage.vue'
 const props = defineProps<{ message: string }>()
 </script>
 
@@ -38,7 +40,7 @@ const props = defineProps<{ message: string }>()
         </div>
         <div v-if="props.message" class="chat-content-body">
             <div class="chat-content-body-message">
-                <div class="chat-content-body-message-item"></div>
+                <ChatMessage />
             </div>
             <div class="chat-content-body-input">
                 <ChatInput />
@@ -58,7 +60,9 @@ const props = defineProps<{ message: string }>()
             <div class="chat-content-body-input">
                 <ChatInput />
             </div>
-            <div class="chat-content-body-tip"></div>
+            <div class="chat-content-body-tip">
+                <ChatTip />
+            </div>
         </div>
     </div>
 </template>
@@ -92,7 +96,6 @@ const props = defineProps<{ message: string }>()
     }
     .chat-content-body-message {
         flex: 1;
-        background-color: #47d3a9;
     }
     .chat-content-body-empty {
         align-items: center;
