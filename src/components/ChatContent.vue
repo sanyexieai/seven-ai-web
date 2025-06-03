@@ -184,7 +184,7 @@ const props = defineProps<{ message: string }>()
 
     .chat-content-body-input {
         width: 70%;
-        margin: auto;
+        margin: 0 auto;
     }
 
     .chat-content-body-tip {
