@@ -12,18 +12,18 @@ import { ref, computed} from 'vue'
             <div class="chat-input-tools-item">
                 <div class="tool-button">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
+                        <use xlink:href="#icon-tianjia"></use>
                     </svg> 
                 </div>
                 <div class="tool-button">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
+                        <use xlink:href="#icon-hulianwang"></use>
                     </svg> 
                     <span>联网搜索</span>
                 </div>
                 <div class="tool-button">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
+                        <use xlink:href="#icon-code"></use>
                     </svg> 
                     <span>代码解释器</span>
                 </div>
@@ -31,12 +31,12 @@ import { ref, computed} from 'vue'
             <div class="chat-input-tools-item">
                 <div class="tool-button">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
+                        <use xlink:href="#icon-luyinyuyin"></use>
                     </svg> 
                 </div>
                 <div class="tool-button">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
+                        <use xlink:href="#icon-hujiao"></use>
                     </svg> 
                 </div>
             </div>
@@ -58,7 +58,7 @@ import { ref, computed} from 'vue'
 }
 
 .chat-input-box input {
-    width: 100%;
+    width: calc(100% - 32px);
     height: 40px;
     padding: 0 16px;
     border: 1px solid #e8e8e8;
@@ -95,9 +95,9 @@ import { ref, computed} from 'vue'
 .tool-button {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 6px 12px;
-    border-radius: 4px;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s;
     color: #666;
@@ -110,7 +110,19 @@ import { ref, computed} from 'vue'
 }
 
 .tool-button .icon {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.tool-button:hover .icon {
+    background: rgba(24, 144, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.tool-button span {
+    line-height: 1;
 }
 </style>

@@ -11,28 +11,28 @@ const props = defineProps<{ message: string }>()
     <div class="chat-content">
         <div class="chat-content-header">
             <div class="chat-content-header-model">
-                <div style="display: flex;flex-direction: row;align-items: center;">
-                    <div>llama3.2:latest</div>
-                    <div>
+                <div class="model-info">
+                    <div class="model-name">llama3.2:latest</div>
+                    <div class="model-icon">
                         <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
+                            <use xlink:href="#icon-xiangxia"></use>
                         </svg>  
                     </div>
-                    <div>
+                    <div class="model-icon">
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-_qi"></use>
+                            <use xlink:href="#icon-tianjia"></use>
                         </svg>  
                     </div>
                 </div>
-                <div >
-                    <div style="text-align: left;">设为默认</div>
+                <div class="model-default">
+                    <div>设为默认</div>
                 </div>
             </div>
             <div class="chat-content-header-avatar">
-                <div style="flex: 1;"></div>
-                <div style="display: flex;flex-direction: row;align-items: center;">
+                <div class="spacer"></div>
+                <div class="avatar-group">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
+                        <use xlink:href="#icon-gaojishezhi"></use>
                     </svg>  
                     <Avatar name="sanye" />
                 </div>
@@ -45,17 +45,16 @@ const props = defineProps<{ message: string }>()
             <div class="chat-content-body-input">
                 <ChatInput />
             </div>
-            
         </div>
 
         <div v-else class="chat-content-body chat-content-body-empty">
             <div class="chat-content-body-title">
-                <div>
+                <div class="title-icon">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
-                    </svg>  
+                        <use xlink:href="#icon-seven"></use>
+                    </svg>    
                 </div>
-                <div>llama3.2:latest</div>
+                <div class="title-text">llama3.2:latest</div>
             </div>
             <div class="chat-content-body-input">
                 <ChatInput />
@@ -78,6 +77,7 @@ const props = defineProps<{ message: string }>()
         margin: 16px;
         overflow: hidden;
     }
+
     .chat-content-header {
         height: 60px;
         display: flex;
@@ -87,25 +87,43 @@ const props = defineProps<{ message: string }>()
         background-color: #fafafa;
         align-items: center;
     }
+
     .chat-content-header-model {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 4px;
     }
-    .chat-content-header-model > div:first-child {
+
+    .model-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .model-name {
         font-weight: 500;
         color: #333;
     }
-    .chat-content-header-model > div:last-child {
+
+    .model-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .model-default {
         font-size: 13px;
         color: #666;
         cursor: pointer;
         transition: color 0.2s;
+        text-align: left;
     }
-    .chat-content-header-model > div:last-child:hover {
+
+    .model-default:hover {
         color: #1890ff;
     }
+
     .chat-content-header-avatar {
         flex: 1;
         display: flex;
@@ -114,40 +132,85 @@ const props = defineProps<{ message: string }>()
         align-items: center;
         gap: 12px;
     }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .avatar-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
     .chat-content-body {
         flex: 1;
         display: flex;
         flex-direction: column;
         padding: 20px;
     }
+
     .chat-content-body-message {
         flex: 1;
         overflow-y: auto;
         padding: 0 8px;
     }
+
     .chat-content-body-empty {
         align-items: center;
         justify-content: center;
         gap: 24px;
     }
+
     .chat-content-body-title {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
         font-size: 18px;
         font-weight: 500;
         color: #333;
     }
-    .chat-content-body-title .icon {
-        width: 24px;
-        height: 24px;
-        color: #1890ff;
+
+    .title-icon {
+        display: flex;
+        align-items: center;
     }
+
+    .title-text {
+        font-weight: 500;
+    }
+
     .chat-content-body-input {
-        margin-top: 16px;
+        width: 70%;
+        margin: auto;
     }
+
     .chat-content-body-tip {
         margin-top: 24px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        padding: 4px;
+        border-radius: 4px;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+
+    .icon:hover {
+        background: rgba(0, 0, 0, 0.05);
+        color: #1890ff;
+    }
+
+    .chat-content-body-title .icon {
+        width: 28px;
+        height: 28px;
+        color: #1890ff;
+        padding: 4px;
+        border-radius: 6px;
+        background: rgba(24, 144, 255, 0.1);
     }
 </style>

@@ -12,7 +12,7 @@ import Avatar from './Avatar.vue'
             <div class="side-bar-item-row" style="flex: 1;">
                 <div style="margin: 0 5px;">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-_qi"></use>
+                        <use xlink:href="#icon-seven"></use>
                     </svg>    
                 </div>
                 <div style="flex: 1;font-size: 14px;line-height: 24px; font-weight: bold;">新对话</div>
