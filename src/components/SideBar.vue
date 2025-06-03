@@ -24,10 +24,30 @@ import Avatar from './Avatar.vue'
             </div>
         </div>
         <div class="side-bar-item side-bar-item-col side-bar-item-flex">
-            <div class="side-bar-title side-bar-item-row">笔记</div>
-            <div class="side-bar-title side-bar-item-row">工作空间</div>
-            <div class="side-bar-title side-bar-item-row">搜索</div>
-            <div class="side-bar-title side-bar-item-row">对话</div>
+            <div class="side-bar-title side-bar-item-row">
+                <svg class="icon-small" aria-hidden="true">
+                        <use xlink:href="#icon-biji"></use>
+                </svg>  
+                笔记
+            </div>
+            <div class="side-bar-title side-bar-item-row">
+                <svg class="icon-small" aria-hidden="true">
+                        <use xlink:href="#icon-shuju-"></use>
+                </svg>   
+                工作空间
+            </div>
+            <div class="side-bar-title side-bar-item-row">
+                <svg class="icon-small" aria-hidden="true">
+                        <use xlink:href="#icon-sousuo"></use>
+                </svg>   
+                搜索
+            </div>
+            <div class="side-bar-title side-bar-item-row">
+                <svg class="icon-small" aria-hidden="true">
+                        <use xlink:href="#icon-xiangxia"></use>
+                </svg>   
+                对话
+            </div>
         </div>
         <div class="side-bar-item"> 
             <div class="side-bar-item-row">
@@ -89,8 +109,7 @@ import Avatar from './Avatar.vue'
 
 .side-bar-title {
     font-size: 14px;
-    font-weight: bold;
-    margin: 5px;
+    margin: 7px 5px;
 }
 
 .side-bar-user {
@@ -104,5 +123,10 @@ import Avatar from './Avatar.vue'
 .icon {
     width: 24px;
     height: 24px;
+}
+.icon-small {
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
 }
 </style>
