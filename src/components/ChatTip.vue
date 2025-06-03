@@ -42,7 +42,6 @@ const tips = [
 <style scoped>
 .chat-tip {
     width: 100%;
-    max-width: 800px;
     margin: 0 auto;
     padding: 24px;
     background: #fff;

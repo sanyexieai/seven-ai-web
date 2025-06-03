@@ -51,7 +51,6 @@ import { ref } from 'vue'
   padding: 16px 32px 8px 32px;
   margin: 0 auto;
   width: 100%;
-  max-width: 900px;
   position: relative;
 }
 
